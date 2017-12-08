@@ -1,0 +1,45 @@
+{
+  "name": "messageservice",
+  "version": "1.0.0",
+  "description": "Microservice for messaging service",
+  "apidoc": {
+    "title": "PMessageservice API",
+    "url": "http://domain"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec --recursive",
+    "codedocs": "doxdox 'src/**/*.js' --ignore './src/routes.js' --layout bootstrap --output docs/code/documentation.html",
+    "apidocs": "apidoc -f 'routes.js' -i ./src -o ./docs/api/",
+    "coverage": "istanbul cover ./node_modules/.bin/_mocha -- -- -u exports -R spec test/**/*"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@risingstack/trace": "^3.12.2",
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.1",
+    "chai": "^3.5.0",
+    "express": "^4.15.2",
+    "jwt-simple": "^0.5.0",
+    "mocha": "^3.1.2",
+    "mongoose": "^4.6.1",
+    "morgan": "^1.7.0",
+    "node-gcm": "^0.14.4",
+    "nodemailer": "^4.1.0",
+    "redis": "^2.6.2",
+    "request-promise": "^4.1.1",
+    "winston": "^2.2.0",
+    "winston-daily-rotate-file": "^1.3.1",
+    "uuid": "^3.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "doxdox": "^2.0.2",
+    "fakeredis": "^2.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.2",
+    "sinon": "^1.17.6"
+  }
+}
