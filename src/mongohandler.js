@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Config = require('./config'),
       config = new Config();
-
+var server = process.env.DNSDOMAIN;
 //We need to work with "MongoClient" interface in order to connect to a mongodb server.
 module.exports.listen = function(url){
   //var url = config.database;
