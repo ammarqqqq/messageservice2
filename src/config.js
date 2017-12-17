@@ -3,7 +3,7 @@ module.exports = function(){
         case 'test':
             return {
               'secret': '04050405',
-              'database': 'mongodb://localhost:27017/messages_it',
+              'database': 'mongodb://localhost:27015/messages_it',
               'logsDirectory': 'logs',
               'serviceName': 'messageservice',
               'emailServer': 'smtp.gmail.com',
@@ -14,7 +14,7 @@ module.exports = function(){
         default:
             return {
               'secret': '04050405',
-              'database': 'mongodb://messageservicemongo:27017/messages',
+              'database': 'mongodb://microservices_messageservicemongo:27015/messages',
               'logsDirectory': 'logs',
               'serviceName': 'messageservice',
               'emailServer': 'smtp.gmail.com',
@@ -24,4 +24,3 @@ module.exports = function(){
             };
     }
 };
-

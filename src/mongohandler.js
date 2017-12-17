@@ -4,9 +4,11 @@ const Config = require('./config'),
 
 //We need to work with "MongoClient" interface in order to connect to a mongodb server.
 module.exports.listen = function(url){
-  var url = config.database;
+  //var url = config.database;
+    var url = "mongodb://" +  server  +  ":27015/messages";
   try {
-    mongoose.connect(url);
+    //mongoose.connect(url);
+      mongoose.connect(url, { useMongoClient: true });
     console.log("Connected to " + url)
   } catch(error) {
     console.log("Could not connect to " + url + ". " + error);
